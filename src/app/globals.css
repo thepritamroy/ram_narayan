@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+
+
 @import "tailwindcss";
 
 :root {
@@ -15,12 +22,193 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: hsl(0, 0%, 100%);
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--foreground);
+  color: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* .playfair {
+  font-family: 'Playfair Display', serif;
+}
+.roboto{
+  font-family: "Roboto";
+  font-optical-sizing: auto;
+  font-weight: 700;
+}
+
+.open-sans-bold {
+  font-family: "Open Sans";
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+} */
+
+
+.animate_navbar {
+  animation: dropIn 0.5s ease-in-out forwards;
+}
+
+@keyframes dropIn {
+  from {
+    transform: translateY(-100%);
+    background-color: transparent;
+  }
+  to {
+    transform: translateY(0%);
+    background-color: #02024c;
+  }
+}
+
+
+
+
+/* For heading-responsive-1 */
+@media (max-width: 870px) and (min-width: 768px) {
+  .heading-responsive-1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  p[class*="heading-responsive-2"] {
+    font-size: 1.1rem ;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade_in{
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes slide-in {
+    0% {
+      transform: translateX(-10%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes slide-left {
+    0% {
+      transform: translateX(10%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes pop-up {
+    0% {
+      opacity: 0;
+      scale: 0.9;
+    }
+    100% {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+
+  .animate-slide-in-1 { /* Keep class name for consistency */
+    animation: slide-in 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-2 {
+    animation: pop-up 0.4s 0.2s ease-out forwards;
+
+  }
+
+  .animate-slide-in-3 {
+    animation: slide-left 0.4s ease-out forwards;
+  }
+}
+
+@keyframes dropDown{
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+
+.drop-down {
+  animation: dropDown 0.5s ease-in-out forwards;
+}
+
+
+@layer utilities {
+  /* In animations */
+  @keyframes slide-in-from-left {
+    0% { transform: translateX(-100%); opacity: 0.5; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+  @keyframes slide-in-from-right {
+    0% { transform: translateX(100%); opacity: 0.5; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+
+  /* Out animations */
+  @keyframes slide-out-to-left {
+    0% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(-100%); opacity: 0.5; }
+  }
+  @keyframes slide-out-to-right {
+    0% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(100%); opacity: 0.5; }
+  }
+
+  @keyframes slide-up-to-down {
+    0% { transform: translateY(100%); opacity: 0; }
+    100% { transform: translateY(0%); opacity: 1; }
+  }
+
+  .animate-slide-in-from-left {
+    animation: slide-in-from-left 0.6s ease forwards;
+  }
+  .animate-slide-in-from-right {
+    animation: slide-in-from-right 0.6s ease forwards;
+  }
+  .animate-slide-out-to-left {
+    animation: slide-out-to-left 0.6s ease forwards;
+  }
+  .animate-slide-out-to-right {
+    animation: slide-out-to-right 0.6s ease forwards;
+  }
+
+  .animate-slide-up-to-down {
+    animation: slide-up-to-down 0.6s ease forwards;
+  }
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 120px; /* Adjust according to your navbar height */
+    scroll-behavior: smooth;
+  }
+}
+
+
+
+
+
