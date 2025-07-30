@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -18,12 +19,12 @@ const Footer = () => {
         <div>
           <h4 className="text-lg font-semibold mb-3 border-b border-gray-600 w-fit">School</h4>
           <ul className="space-y-2 text-gray-400 text-sm">
-            <li><a href="/" className="hover:text-white">Home</a></li>
-            <li><a href="/pages/about" className="hover:text-white">About Us</a></li>
-            <li><a href="/pages/facilities" className="hover:text-white">Facility</a></li>
-            <li><a href="/pages/about/#overview" className="hover:text-white">Overview</a></li>
-            <li><a href="/pages/transport" className="hover:text-white">Transport</a></li>
-            <li><a href="/pages/contact-us" className="hover:text-white">Contact</a></li>
+            <li><Link href="/" className="hover:text-white">Home</Link></li>
+            <li><Link href="/pages/about" className="hover:text-white">About Us</Link></li>
+            <li><Link href="/pages/facilities" className="hover:text-white">Facility</Link></li>
+            <li><Link href="/pages/about/#overview" className="hover:text-white">Overview</Link></li>
+            <li><Link href="/pages/transport" className="hover:text-white">Transport</Link></li>
+            <li><Link href="/pages/contact-us" className="hover:text-white">Contact</Link></li>
           </ul>
         </div>
 

@@ -5,29 +5,13 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaAngleLeft } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
-import { Playfair_Display , Open_Sans, Montserrat,Roboto} from 'next/font/google';
+import { Playfair_Display} from 'next/font/google';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
   weight: ['700','400'], // Choose needed weights
   style: ['normal', 'italic'],
 });
-
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  weight : ['800']
-})
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight : ['800']
-})
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight : ['800']
-})
-
 
 
 const Hero = () => {

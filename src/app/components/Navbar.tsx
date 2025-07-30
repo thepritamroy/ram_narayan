@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
             <div className="absolute top-[34px] left-0 bg-linear-to-r from-red-950 to-red-700 text-[#ffffff] font-light p-4 w-[320px] shadow-lg opacity-0  group-hover:opacity-100 flex transition-all duration-300 origin-top flex-col pointer-events-none group-hover:pointer-events-auto">
               <h2 className="text-[18px] font-semibold">About us</h2>
               <div className="bg-[#c30303] h-[2px] w-1/2 mb-2"></div>
-              <Link href="/pages/about/#principal-desk" className="hover:text-[#dadad9] transition-all duration-300 border-b border-dashed border-[#beb6b6aa] py-3">Principal's Desk</Link>
+              <Link href="/pages/about/#principal-desk" className="hover:text-[#dadad9] transition-all duration-300 border-b border-dashed border-[#beb6b6aa] py-3">Principal&apos;s Desk</Link>
               <Link href="/pages/about/#vision" className="hover:text-[#dadad9] transition-all duration-300 border-b border-dashed border-[#beb6b6aa] py-3">Vision</Link>
               <Link href="/pages/about/#overview" className="hover:text-[#dadad9] transition-all duration-300 border-b border-dashed border-[#beb6b6aa] py-3">Overview</Link>
               <Link href="/pages/about/#timing" className="hover:text-[#dadad9] transition-all duration-300 border-b border-dashed border-[#beb6b6aa] py-3">School Timings</Link>
